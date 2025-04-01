@@ -23,21 +23,21 @@ const CATEGORIES = [
     { id: '2', name: 'Pop', image: 'https://i.scdn.co/image/ab67706f00000002fe6d8d1019d5b302213e3730' },
 
     // Decades - Pop & General
-    { id: '3', name: 'Années 80', image: 'https://i.scdn.co/image/ab67706f000000025f72117e76f8743a20be2776' },
-    { id: '4', name: 'Pop 80', image: 'https://i.scdn.co/image/ab67706f0000000285704160b49125ac95099ec8' },
-    { id: '5', name: 'Années 90', image: 'https://i.scdn.co/image/ab67706f0000000278b4745cb2a8965db098aff0' },
-    { id: '6', name: 'Pop 90', image: 'https://i.scdn.co/image/ab67706f00000002e9c9419099422973496d99a7' },
-    { id: '7', name: 'Années 2000', image: 'https://i.scdn.co/image/ab67706f000000026abff8de68c75470ea8f0665' },
-    { id: '8', name: 'Pop 2000', image: 'https://i.scdn.co/image/ab67706f000000027cceee1a8ada7b9c4ce1ebf1' },
-    { id: '9', name: 'Années 2010', image: 'https://i.scdn.co/image/ab67706f000000020e39c49b72045148f4f921b9' },
-    { id: '10', name: 'Pop 2010', image: 'https://i.scdn.co/image/ab67706f00000002c4e0a29097d2f0f52baf8b68' },
+    { id: '3', name: 'Années 80', image: 'https://i.scdn.co/image/ab67706f00000002b2a0585878a07d5a6f69db73' },
+    { id: '4', name: 'Pop 80', image: 'https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84fa4dcd9a08eb6f43249f0245' },
+    { id: '5', name: 'Années 90', image: 'https://i.scdn.co/image/ab67706f00000002db68e1523b83ef9e51f77917' },
+    { id: '6', name: 'Pop 90', image: 'https://i.scdn.co/image/ab67706f000000023c783941e311b5fc163cf219' },
+    { id: '7', name: 'Années 2000', image: 'https://i.scdn.co/image/ab67616d00001e02d19086792a263aa4441104d5' },
+    { id: '8', name: 'Pop 2000', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84eabf1dd7769b98ecfd70b8e7' },
+    { id: '9', name: 'Années 2010', image: 'https://i.scdn.co/image/ab67706f000000027f84b4715280a2332f1aed9e' },
+    { id: '10', name: 'Pop 2010', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8492fd29c57d6f8662b4bbb1a5' },
 
     // Rap & Hip Hop
-    { id: '11', name: 'Rap FR', image: 'https://i.scdn.co/image/ab67706f000000025e196e31a058e5531d4b1bcc' },
-    { id: '12', name: 'Classiques Rap Français', image: 'https://i.scdn.co/image/ab67706f0000000235f14aa06e5f7880f175bf73' },
-    { id: '13', name: 'Rap US', image: 'https://i.scdn.co/image/ab67706f0000000264cf4fa971080d0cad799d4e' },
-    { id: '14', name: 'Classiques Rap Américain', image: 'https://i.scdn.co/image/ab67706f0000000213601d4833623a4c10b75ca9' },
-    { id: '15', name: 'Hip Hop', image: 'https://i.scdn.co/image/ab67706f00000002d72ef75e14ca6f60ea7f4b5e' },
+    { id: '11', name: 'Rap FR', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c25fe3f0f416281d1a6a9f6cb' },
+    { id: '12', name: 'Classiques Rap Français', image: 'https://i.scdn.co/image/ab67616d00001e02b897f7f02a06ce4dc229b975' },
+    { id: '13', name: 'Rap US', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c309fe43a277ab2144608d409' },
+    { id: '14', name: 'Classiques Rap Américain', image: 'https://i.scdn.co/image/ab67616d00001e02f11f6b3eb213cdfb53bbac2a' },
+    { id: '15', name: 'Hip Hop', image: 'https://seed-mix-image.spotifycdn.com/v6/img/hip_hop/4V8LLVI7PbaPR0K2TGSxFF/fr/default' },
 
     // Rock by decade
     { id: '16', name: 'Rock 80', image: 'https://i.scdn.co/image/ab67706f000000026a4dd2feddc04bfc9ab6f05f' },
