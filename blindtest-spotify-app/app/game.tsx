@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, ActivityIndicator } fr
 import { useLocalSearchParams } from 'expo-router';
 
 // Spotify token to use for all API calls
-const SPOTIFY_TOKEN = "BQD4zj5XyTyz83GDJo8JFpas4zObBiM2SotnbkY23FlCqDDJffDD9vSRzl4b_e1ZdMq5AEHy_ODBCmbcTx1zU2Sw7Lur-fOmQHwfaU5kx--tIshbf0j4ttuQS-aKoQG-MzEgiY-Nnwdz3v2vaR25_88BBcXHER9s5pF2fhrBcc_wKn54RZztZVnA9eP6GDeCLHtAYUr9wMqbzztBWcxZ5pnFN-W-Yv2uhEiN4uMPlIDoZYkgSsThVGPZOaEckeL9JDjwKO6hUngCFdJuyr3Nm_lbFBnPivquqqK27uesK8DO6tg_gRKlrXnn5UYwWrqdkmc";
+const SPOTIFY_TOKEN = "BQD_VXYytdKz-H1pMdwq0b31P2VlLeuPbv5rEr--uatDd2AmpaK-I5Vpe0_Z6YYRVDtYP795MTY4qS0eDF5pUjkz4t0ixbj8D6bo91YCWor6HEU20jgW3ZnOjtSSGTRe9ncD1YLXaI7cnBZs2M0dnWlpJxiCZhr8GFdbb5lg_R90oxFjBKlkNFEpG3yPgHJ53P3TZQynOw2QemYVMf4Fmm0Jm-zsZAgOnve_zSMTsdGP58hUdrVdfl1_Y5eHdtajBsFLcMKRLMfJ0PHZ476pnuVe837N2fC_20vNp1OoyPaeYvZiWZs4sETXcSqH5oxaTcnRBMk";
 
 export default function Game() {
     const [loading, setLoading] = useState(true);
