@@ -49,19 +49,19 @@ const CATEGORIES = [
     { id: '20', name: 'Techno', image: 'https://i.scdn.co/image/ab67706f00000002b5d03b4e031e7d8e707fbe4a' },
 
     // Other genres
-    { id: '21', name: 'Classiques Chansons Françaises', image: 'https://i.scdn.co/image/ab67706f000000026809e972278a9bc0e12524da' },
-    { id: '22', name: 'Latino', image: 'https://i.scdn.co/image/ab67706f0000000221c1564f78ed3fddce7402c6' },
-    { id: '23', name: 'Funk', image: 'https://i.scdn.co/image/ab67706f00000002a5c43e968dea669245ca1251' },
-    { id: '24', name: 'K-Pop', image: 'https://i.scdn.co/image/ab67706f00000002978b1452dbe152e65a352a1d' },
+    { id: '21', name: 'Classiques Chansons Françaises', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c3a7df67402353a232e7204d8' },
+    { id: '22', name: 'Latino', image: 'https://mosaic.scdn.co/300/ab67616d00001e0211b9999…aa997b812ab67616d00001e0282de1ca074ae63cb18fce335' },
+    { id: '23', name: 'Funk', image: 'https://mosaic.scdn.co/300/ab67616d00001e023a3c381…712ec96a7ab67616d00001e02e88a017e11d2dc06ff391761' },
+    { id: '24', name: 'K-Pop', image: 'https://seed-mix-image.spotifycdn.com/v6/img/k_pop/3eVa5w3URK5duf6eyVDbu9/fr/default' },
 
     // Media
-    { id: '25', name: 'Musiques de Films', image: 'https://i.scdn.co/image/ab67706f00000002e0095d42f0b1e37546caac53' },
-    { id: '26', name: 'Musique de Jeux Vidéos', image: 'https://i.scdn.co/image/ab67706f000000026057473304c2e2a0c4a75e6e' },
-    { id: '27', name: 'Génériques Dessins Animés', image: 'https://i.scdn.co/image/ab67706f00000002017d551b6ef3af4abef4e64f' },
+    { id: '25', name: 'Musiques de Films', image: 'https://mosaic.scdn.co/300/ab67616d00001e0205b46ad…3fa29ca7fab67616d00001e02f3a2d7f692fcad25284c5f1e' },
+    { id: '26', name: 'Musique de Jeux Vidéos', image: 'https://mosaic.scdn.co/300/ab67616d00001e0201cc3c9…6d7a1c377ab67616d00001e02943c113347461b66ba58d116' },
+    { id: '27', name: 'Génériques Dessins Animés', image: 'https://mosaic.scdn.co/300/ab67616d00001e020d608cb…00cab9cb8ab67616d00001e0243dc506e51ea724ffe975f93' },
 
     // Special categories
-    { id: '28', name: 'Nostalgie', image: 'https://i.scdn.co/image/ab67706f0000000278b231b764bac0166809233c' },
-    { id: '29', name: 'Classiques de la Musique', image: 'https://i.scdn.co/image/ab67706f00000002ff5fffe18788ef05e895c27d' },
+    { id: '28', name: 'Nostalgie', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8480be5241c5b5cd593f020a14' },
+    { id: '29', name: 'Classiques de la Musique', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da849418dd3e204505b565f1b3fe' },
 ];
 
 export default function Categories() {
