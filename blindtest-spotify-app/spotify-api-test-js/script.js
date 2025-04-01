@@ -11,7 +11,7 @@ const generateRandomString = (length) => {
 document.getElementById('spotify-login').addEventListener('click', () => {
     const state = generateRandomString(16);
     localStorage.setItem(stateKey, state);
-    const scope = 'user-read-private user-read-email user-library-read playlist-read-private playlist-modify-public playlist-modify-private';
+    const scope = ' streaming user-read-private user-read-email user-library-read playlist-read-private playlist-modify-public playlist-modify-private';
 
     let url = 'https://accounts.spotify.com/authorize';
     url += '?response_type=token';
