@@ -13,7 +13,7 @@ import {
 import { useRouter } from 'expo-router';
 
 // Spotify token to use for all API calls
-const SPOTIFY_TOKEN = "BQB6q-b8RPLOyf2UqRxijv9rQqSaq60g13-5WvmpTDEKN_pKXIznvc3RXnRUdAcrQDA2H8tjPa5joMbX1iT6HcHQqhZrg2BMgm2MWwF2-LOgRF_-KBDMhDXxSfpzKiNJWETq5wgU3mQlBQaY7CCrn0qG15zf0HXLvA7ASQt4VpaC5KvDrrwt4hbXGkFGIqUNriWKt7TBd6j3COfgZEeS1Xftc_7DQGvSQJCk0chkYVWv7YE5EasigZNJ4UIvUwuWZu7DorjgU8XYHNVpQdqMYtUSdVDFk72J_QsE5KebraaKBUzWGLr42V0JojvaBq7xIpU";
+const SPOTIFY_TOKEN = "BQD_VXYytdKz-H1pMdwq0b31P2VlLeuPbv5rEr--uatDd2AmpaK-I5Vpe0_Z6YYRVDtYP795MTY4qS0eDF5pUjkz4t0ixbj8D6bo91YCWor6HEU20jgW3ZnOjtSSGTRe9ncD1YLXaI7cnBZs2M0dnWlpJxiCZhr8GFdbb5lg_R90oxFjBKlkNFEpG3yPgHJ53P3TZQynOw2QemYVMf4Fmm0Jm-zsZAgOnve_zSMTsdGP58hUdrVdfl1_Y5eHdtajBsFLcMKRLMfJ0PHZ476pnuVe837N2fC_20vNp1OoyPaeYvZiWZs4sETXcSqH5oxaTcnRBMk";
 
 // Mock data for categories - would be fetched from Spotify API in production
 // Organized categories for the blindtest app
