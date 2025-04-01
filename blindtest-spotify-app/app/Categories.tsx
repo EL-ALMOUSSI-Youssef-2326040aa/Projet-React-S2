@@ -22,46 +22,49 @@ const CATEGORIES = [
     { id: '1', name: 'Top 50 : France', image: 'https://charts-images.scdn.co/assets/locale_en/regional/daily/region_fr_default.jpg' },
     { id: '2', name: 'Pop', image: 'https://i.scdn.co/image/ab67706f00000002fe6d8d1019d5b302213e3730' },
 
-    // Decades - Pop & General
-    { id: '3', name: 'Années 80', image: 'https://i.scdn.co/image/ab67706f000000025f72117e76f8743a20be2776' },
-    { id: '4', name: 'Pop 80', image: 'https://i.scdn.co/image/ab67706f0000000285704160b49125ac95099ec8' },
-    { id: '5', name: 'Années 90', image: 'https://i.scdn.co/image/ab67706f0000000278b4745cb2a8965db098aff0' },
-    { id: '6', name: 'Pop 90', image: 'https://i.scdn.co/image/ab67706f00000002e9c9419099422973496d99a7' },
-    { id: '7', name: 'Années 2000', image: 'https://i.scdn.co/image/ab67706f000000026abff8de68c75470ea8f0665' },
-    { id: '8', name: 'Pop 2000', image: 'https://i.scdn.co/image/ab67706f000000027cceee1a8ada7b9c4ce1ebf1' },
-    { id: '9', name: 'Années 2010', image: 'https://i.scdn.co/image/ab67706f000000020e39c49b72045148f4f921b9' },
-    { id: '10', name: 'Pop 2010', image: 'https://i.scdn.co/image/ab67706f00000002c4e0a29097d2f0f52baf8b68' },
+        // Decades - Pop & General
+    { id: '3', name: 'Années 80', image: 'https://i.scdn.co/image/ab67706f00000002b2a0585878a07d5a6f69db73' },
+    { id: '4', name: 'Pop 80', image: 'https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84fa4dcd9a08eb6f43249f0245' },
+    { id: '5', name: 'Années 90', image: 'https://i.scdn.co/image/ab67706f00000002db68e1523b83ef9e51f77917' },
+    { id: '6', name: 'Pop 90', image: 'https://i.scdn.co/image/ab67706f000000023c783941e311b5fc163cf219' },
+    { id: '7', name: 'Années 2000', image: 'https://i.scdn.co/image/ab67616d00001e02d19086792a263aa4441104d5' },
+    { id: '8', name: 'Pop 2000', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84eabf1dd7769b98ecfd70b8e7' },
+    { id: '9', name: 'Années 2010', image: 'https://i.scdn.co/image/ab67706f000000027f84b4715280a2332f1aed9e' },
+    { id: '10', name: 'Pop 2010', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8492fd29c57d6f8662b4bbb1a5' },
 
     // Rap & Hip Hop
-    { id: '11', name: 'Rap FR', image: 'https://i.scdn.co/image/ab67706f000000025e196e31a058e5531d4b1bcc' },
-    { id: '12', name: 'Classiques Rap Français', image: 'https://i.scdn.co/image/ab67706f0000000235f14aa06e5f7880f175bf73' },
-    { id: '13', name: 'Rap US', image: 'https://i.scdn.co/image/ab67706f0000000264cf4fa971080d0cad799d4e' },
-    { id: '14', name: 'Classiques Rap Américain', image: 'https://i.scdn.co/image/ab67706f0000000213601d4833623a4c10b75ca9' },
-    { id: '15', name: 'Hip Hop', image: 'https://i.scdn.co/image/ab67706f00000002d72ef75e14ca6f60ea7f4b5e' },
+    { id: '11', name: 'Rap FR', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c25fe3f0f416281d1a6a9f6cb' },
+    { id: '12', name: 'Classiques Rap Français', image: 'https://i.scdn.co/image/ab67616d00001e02b897f7f02a06ce4dc229b975' },
+    { id: '13', name: 'Rap US', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c309fe43a277ab2144608d409' },
+    { id: '14', name: 'Classiques Rap Américain', image: 'https://i.scdn.co/image/ab67616d00001e02f11f6b3eb213cdfb53bbac2a' },
+    { id: '15', name: 'Hip Hop', image: 'https://seed-mix-image.spotifycdn.com/v6/img/hip_hop/4V8LLVI7PbaPR0K2TGSxFF/fr/default' },
 
     // Rock by decade
-    { id: '16', name: 'Rock 80', image: 'https://i.scdn.co/image/ab67706f000000026a4dd2feddc04bfc9ab6f05f' },
-    { id: '17', name: 'Rock 90', image: 'https://i.scdn.co/image/ab67706f00000002478f23217cfd6839b5e3c429' },
-    { id: '18', name: 'Rock 2000', image: 'https://i.scdn.co/image/ab67706f000000024b64528b8fb770104bac5a21' },
+    { id: '16', name: 'Rock 80', image: 'https://mosaic.scdn.co/300/ab67616d00001e0221ebf49…236943275ab67616d00001e02b4e4e7ee52c6fc8be77d8a33' },
+    { id: '17', name: 'Rock 90', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da847e680b551fb61cbc60a97dda' },
+    { id: '18', name: 'Rock 2000', image: 'https://mosaic.scdn.co/300/ab67616d00001e0208a1b1e…ae74e8595ab67616d00001e02cbd2ee7dff77bfb2b5f0af52' },
 
     // Electronic music
-    { id: '19', name: 'Electro', image: 'https://i.scdn.co/image/ab67706f000000026214f0de25baefc0f233ad02' },
+    { id: '19', name: 'Electro', image: 'https://seed-mix-image.spotifycdn.com/v6/img/desc/Electro/en/default' },
     { id: '20', name: 'Techno', image: 'https://i.scdn.co/image/ab67706f00000002b5d03b4e031e7d8e707fbe4a' },
 
     // Other genres
-    { id: '21', name: 'Classiques Chansons Françaises', image: 'https://i.scdn.co/image/ab67706f000000026809e972278a9bc0e12524da' },
-    { id: '22', name: 'Latino', image: 'https://i.scdn.co/image/ab67706f0000000221c1564f78ed3fddce7402c6' },
-    { id: '23', name: 'Funk', image: 'https://i.scdn.co/image/ab67706f00000002a5c43e968dea669245ca1251' },
-    { id: '24', name: 'K-Pop', image: 'https://i.scdn.co/image/ab67706f00000002978b1452dbe152e65a352a1d' },
+    { id: '21', name: 'Hits français 2010', image: 'https://i.scdn.co/image/ab67706f000000020419b7ea108a940a2810766c' },
+    { id: '21', name: 'Hits français 2010', image: 'https://i.scdn.co/image/ab67706f0000000251afd1cada9e84e687fd80b4' },
+    { id: '21', name: 'Hits français 90', image: 'https://i.scdn.co/image/ab67706f00000002c733cde41c56dd2eb0ab0b25' },
+    { id: '21', name: 'Hits français 80', image: 'https://i.scdn.co/image/ab67706f00000002ce1691b34dcb01463b397bb7' },
+    { id: '22', name: 'Latino', image: 'https://mosaic.scdn.co/300/ab67616d00001e0211b9999b620ef9bc0e957623ab67616d00001e0221d546b7511792c3aa5b7eeeab67616d00001e022b6d78c5a3f6247aa997b812ab67616d00001e0282de1ca074ae63cb18fce335' },
+    { id: '23', name: 'Funk', image: 'https://mosaic.scdn.co/300/ab67616d00001e023a3c381f6910a4fe51c2640bab67616d00001e023b4f58e95e5598ecf6d90ed1ab67616d00001e02c9d0bf7323faf6b712ec96a7ab67616d00001e02e88a017e11d2dc06ff391761' },
+    { id: '24', name: 'K-Pop', image: 'https://mosaic.scdn.co/300/ab67616d00001e02763208e225ccbbda004d2176ab67616d00001e0287f53da5fb4ab1171766b2d5ab67616d00001e0293a783eccc24a636fc8d3d46ab67616d00001e02edf5b257be1d6593e81bb45f' },
 
     // Media
-    { id: '25', name: 'Musiques de Films', image: 'https://i.scdn.co/image/ab67706f00000002e0095d42f0b1e37546caac53' },
-    { id: '26', name: 'Musique de Jeux Vidéos', image: 'https://i.scdn.co/image/ab67706f000000026057473304c2e2a0c4a75e6e' },
-    { id: '27', name: 'Génériques Dessins Animés', image: 'https://i.scdn.co/image/ab67706f00000002017d551b6ef3af4abef4e64f' },
+    { id: '25', name: 'Musiques de Films', image: 'https://mosaic.scdn.co/300/ab67616d00001e0205b46adf4b37df2f589cc7c9ab67616d00001e0292f051ce3c585b5c2db21d52ab67616d00001e02c47ed3d97ec570e3fa29ca7fab67616d00001e02f3a2d7f692fcad25284c5f1e' },
+    { id: '26', name: 'Musique de Jeux Vidéos', image: 'https://i.scdn.co/image/ab67706f00000002c94fd5639e1bd451f55b103c' },
+    { id: '27', name: 'Génériques Dessins Animés', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c4dcbdab0f88fa9d454c0bb09' },
 
     // Special categories
-    { id: '28', name: 'Nostalgie', image: 'https://i.scdn.co/image/ab67706f0000000278b231b764bac0166809233c' },
-    { id: '29', name: 'Classiques de la Musique', image: 'https://i.scdn.co/image/ab67706f00000002ff5fffe18788ef05e895c27d' },
+    { id: '28', name: 'Phonk', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84e8724ea8f96638e0bdc429c3' },
+    { id: '29', name: 'Classiques de la Musique', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c4dcbdab0f88fa9d454c0bb09' },
 ];
 
 export default function Categories() {
