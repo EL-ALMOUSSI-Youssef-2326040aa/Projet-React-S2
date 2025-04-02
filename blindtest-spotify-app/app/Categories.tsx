@@ -11,58 +11,13 @@ import {
     Image
 } from 'react-native';
 import { useRouter } from 'expo-router';
+import categoriesData from './categories.json'; // Importer le fichier JSON
 
 // Spotify token to use for all API calls
-const SPOTIFY_TOKEN = "BQD_VXYytdKz-H1pMdwq0b31P2VlLeuPbv5rEr--uatDd2AmpaK-I5Vpe0_Z6YYRVDtYP795MTY4qS0eDF5pUjkz4t0ixbj8D6bo91YCWor6HEU20jgW3ZnOjtSSGTRe9ncD1YLXaI7cnBZs2M0dnWlpJxiCZhr8GFdbb5lg_R90oxFjBKlkNFEpG3yPgHJ53P3TZQynOw2QemYVMf4Fmm0Jm-zsZAgOnve_zSMTsdGP58hUdrVdfl1_Y5eHdtajBsFLcMKRLMfJ0PHZ476pnuVe837N2fC_20vNp1OoyPaeYvZiWZs4sETXcSqH5oxaTcnRBMk";
+const SPOTIFY_TOKEN = "BQC8YPI2P3cB_fhYLQ2otNdGc3SGQ-AqtWqDgrgInbU3g1aZ01L7up6G-3pIMuM733aZDkhSzyhj1K5bbPZeW_QrNjisiohNKPVRTJ6iem2tsmQhc3WmNuTN1b4RicYtEU0rDphuWCRYtKIZR4guFvjfKMDqYCqVpy_QTSqDaV2LJ7k8Xe2fvxmiabex1xwbSAX1WSuIQb7mKhcjKfMghct98JglKgatdLUY-ZfuCMqL1DbRg-rCJe6iuOcjHR3NNW3lRrk2V10CeiEiUXSjWBdWcoHWMlYaW7PH_mtpyzQi3K_fUN0Y7Wva8hoRI_MSd_JVHUs";
 
-// Mock data for categories - would be fetched from Spotify API in production
-// Organized categories for the blindtest app
-const CATEGORIES = [
-    // Popular & Current
-    { id: '1', name: 'Top 50 : France', image: 'https://charts-images.scdn.co/assets/locale_en/regional/daily/region_fr_default.jpg' },
-    { id: '2', name: 'Pop', image: 'https://i.scdn.co/image/ab67706f00000002fe6d8d1019d5b302213e3730' },
-
-    // Decades - Pop & General
-    { id: '3', name: 'Années 80', image: 'https://i.scdn.co/image/ab67706f00000002b2a0585878a07d5a6f69db73' },
-    { id: '4', name: 'Pop 80', image: 'https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84fa4dcd9a08eb6f43249f0245' },
-    { id: '5', name: 'Années 90', image: 'https://i.scdn.co/image/ab67706f00000002db68e1523b83ef9e51f77917' },
-    { id: '6', name: 'Pop 90', image: 'https://i.scdn.co/image/ab67706f000000023c783941e311b5fc163cf219' },
-    { id: '7', name: 'Années 2000', image: 'https://i.scdn.co/image/ab67616d00001e02d19086792a263aa4441104d5' },
-    { id: '8', name: 'Pop 2000', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84eabf1dd7769b98ecfd70b8e7' },
-    { id: '9', name: 'Années 2010', image: 'https://i.scdn.co/image/ab67706f000000027f84b4715280a2332f1aed9e' },
-    { id: '10', name: 'Pop 2010', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8492fd29c57d6f8662b4bbb1a5' },
-
-    // Rap & Hip Hop
-    { id: '11', name: 'Rap FR', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c25fe3f0f416281d1a6a9f6cb' },
-    { id: '12', name: 'Classiques Rap Français', image: 'https://i.scdn.co/image/ab67616d00001e02b897f7f02a06ce4dc229b975' },
-    { id: '13', name: 'Rap US', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c309fe43a277ab2144608d409' },
-    { id: '14', name: 'Classiques Rap Américain', image: 'https://i.scdn.co/image/ab67616d00001e02f11f6b3eb213cdfb53bbac2a' },
-    { id: '15', name: 'Hip Hop', image: 'https://seed-mix-image.spotifycdn.com/v6/img/hip_hop/4V8LLVI7PbaPR0K2TGSxFF/fr/default' },
-
-    // Rock by decade
-    { id: '16', name: 'Rock 80', image: 'https://i.scdn.co/image/ab67706f000000026a4dd2feddc04bfc9ab6f05f' },
-    { id: '17', name: 'Rock 90', image: 'https://i.scdn.co/image/ab67706f00000002478f23217cfd6839b5e3c429' },
-    { id: '18', name: 'Rock 2000', image: 'https://i.scdn.co/image/ab67706f000000024b64528b8fb770104bac5a21' },
-
-    // Electronic music
-    { id: '19', name: 'Electro', image: 'https://i.scdn.co/image/ab67706f000000026214f0de25baefc0f233ad02' },
-    { id: '20', name: 'Techno', image: 'https://i.scdn.co/image/ab67706f00000002b5d03b4e031e7d8e707fbe4a' },
-
-    // Other genres
-    { id: '21', name: 'Classiques Chansons Françaises', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c3a7df67402353a232e7204d8' },
-    { id: '22', name: 'Latino', image: 'https://mosaic.scdn.co/300/ab67616d00001e0211b9999…aa997b812ab67616d00001e0282de1ca074ae63cb18fce335' },
-    { id: '23', name: 'Funk', image: 'https://mosaic.scdn.co/300/ab67616d00001e023a3c381…712ec96a7ab67616d00001e02e88a017e11d2dc06ff391761' },
-    { id: '24', name: 'K-Pop', image: 'https://seed-mix-image.spotifycdn.com/v6/img/k_pop/3eVa5w3URK5duf6eyVDbu9/fr/default' },
-
-    // Media
-    { id: '25', name: 'Musiques de Films', image: 'https://mosaic.scdn.co/300/ab67616d00001e0205b46ad…3fa29ca7fab67616d00001e02f3a2d7f692fcad25284c5f1e' },
-    { id: '26', name: 'Musique de Jeux Vidéos', image: 'https://mosaic.scdn.co/300/ab67616d00001e0201cc3c9…6d7a1c377ab67616d00001e02943c113347461b66ba58d116' },
-    { id: '27', name: 'Génériques Dessins Animés', image: 'https://mosaic.scdn.co/300/ab67616d00001e020d608cb…00cab9cb8ab67616d00001e0243dc506e51ea724ffe975f93' },
-
-    // Special categories
-    { id: '28', name: 'Nostalgie', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8480be5241c5b5cd593f020a14' },
-    { id: '29', name: 'Classiques de la Musique', image: 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da849418dd3e204505b565f1b3fe' },
-];
+// Utiliser les données importées
+const CATEGORIES = categoriesData.categories;
 
 export default function Categories() {
     const router = useRouter();
@@ -102,14 +57,14 @@ export default function Categories() {
 
     const handleCategorySelect = (category) => {
         setCategoryLoading(true);
-        // In a real app, we would fetch songs from this category
-        // For now, we'll just simulate a delay and then redirect
-        setTimeout(() => {
-            setCategoryLoading(false);
-            // Future implementation: router.push({ pathname: '/play', params: { categoryId: category.id }});
-            // For now, we'll just log the selection
-            console.log(`Selected category: ${category.name}`);
-        }, 500);
+        router.push({
+            pathname: '/game',
+            params: {
+                playlistId: category.id_playlist,
+                categoryName: category.name,
+                imageUrl: category.image_playlist
+            }
+        });
     };
 
     const renderCategoryItem = ({ item }) => (
