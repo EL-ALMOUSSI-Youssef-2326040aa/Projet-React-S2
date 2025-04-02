@@ -74,7 +74,7 @@ export default function Categories() {
             disabled={categoryLoading}
         >
             <ImageBackground
-                source={{ uri: item.image }}
+                source={{ uri: item.image_playlist }} // Remplacer item.image par item.image_playlist
                 style={styles.categoryImage}
                 imageStyle={{ borderRadius: 8 }}
             >
