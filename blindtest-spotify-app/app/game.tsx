@@ -66,6 +66,22 @@ export default function Game() {
                     }
                 });
 
+                player.addListener('initialization_error', ({ message }: { message: string }) => {
+                    console.error('Failed to initialize', message);
+                });
+
+                player.addListener('authentication_error', ({ message }: { message: string }) => {
+                    console.error('Failed to authenticate', message);
+                });
+
+                player.addListener('account_error', ({ message }: { message: string }) => {
+                    console.error('Failed to validate Spotify account', message);
+                });
+
+                player.addListener('playback_error', ({ message }: { message: string }) => {
+                    console.error('Failed to perform playback', message);
+                });
+
                 player.connect();
             };
 
