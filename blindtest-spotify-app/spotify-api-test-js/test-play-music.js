@@ -1,8 +1,11 @@
-const accessToken = 'BQDfyELyKJDQBJ2xBJ13nSJCcj4yUCHFN4GVvDmW8nvQQkxcVzBcCmZWNUj3KX5_stSD7V0rWvfGpL6-6K2HZWVR5FDtaeyRRmKUKwk7psNBzETvk8sqSDu-ddemOsIB9-VYqVj7y11anLJdw5xiW2O6FshqiAh9iikqkORazhnky7ZM4aBawM3-cCaXPR90VhFwOhyF46RB0g-1YRVqbRILLVtIEYhbezIWZf48qP_2a9_pOFvauCq_f8UScJhipnd3CWg4h7JX9NQvtBtRpXLHmIzI-nlgMuiw6q9SChQ9dW3HTAT06xK3OZzvI29g6Wnw6Cs';
+const accessToken = 'BQA6MvOkPOE4_7snXnx5byp2mLnYAsIAAOYy5lPrRbJJmg2y1jHFfOaDHWt7HFyX3qWWsXC-iaag2VAWTmi7sxJHCRIM2Rd3wzO-10M7_gYAgZA9XNUlDkPLoICTHIbL3joOxyCW8RbKhlxu2rztWhGfNIEzG-Xy1W3QbOU616E0nENkBTGpD3uhmJzekQtUN1wr9OkSp8MwYA_WBFJBEr_LqCcCmz25TNxFbXzejMJnW6pQC71tQz9eNKbMaOdGHcI9UOM5tc4X5vgK5h0p945ypsu7AI8VCIVyLxv8tKpNUqeXhbBYhFR1munvhHPeQj5ibtg';
+// Store the device_id globally so all buttons can access it
 let currentDeviceId = null;
 
+// Initialize Spotify player when page loads to get device_id early
 window.onload = () => {
     initializePlayer();
+    fetchAlbumTracks();
 };
 
 document.getElementById('play-button').addEventListener('click', () => {
@@ -140,5 +143,18 @@ const displayTracks = (tracks) => {
     });
 };
 
+// Fetch and log album tracks
+const fetchAlbumTracks = async () => {
+    console.log('on fetch les albums ');
+    const response = await fetch('https://api.spotify.com/v1/playlists/37i9dQZF1DXdrln2UyZD7F', {
+        headers: {
+            'Authorization': 'Bearer ' + accessToken
+        }
+    });
+    const data = await response.json();
+    console.log('Album Tracks:', data);
+};
+
 // Initialize
 fetchSavedTracks(accessToken);
+fetchAlbumTracks();
