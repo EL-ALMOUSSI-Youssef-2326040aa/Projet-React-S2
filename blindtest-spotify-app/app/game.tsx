@@ -2,9 +2,11 @@
 import { useEffect, useState, useRef } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ActivityIndicator, Image } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 // Token Spotify (à remplacer par un token valide)
-const SPOTIFY_TOKEN = "BQC8YPI2P3cB_fhYLQ2otNdGc3SGQ-AqtWqDgrgInbU3g1aZ01L7up6G-3pIMuM733aZDkhSzyhj1K5bbPZeW_QrNjisiohNKPVRTJ6iem2tsmQhc3WmNuTN1b4RicYtEU0rDphuWCRYtKIZR4guFvjfKMDqYCqVpy_QTSqDaV2LJ7k8Xe2fvxmiabex1xwbSAX1WSuIQb7mKhcjKfMghct98JglKgatdLUY-ZfuCMqL1DbRg-rCJe6iuOcjHR3NNW3lRrk2V10CeiEiUXSjWBdWcoHWMlYaW7PH_mtpyzQi3K_fUN0Y7Wva8hoRI_MSd_JVHUs";
+const SPOTIFY_TOKEN = "BQB7jW2lMfSLv1m-r0HdOc5Jer-Gu6oMs1yxQ5EyrvRsF_AKu8j-WdZi3cfqjF_1YJ6wsCnk2priTUFSbnl39H0EiiZV5IR-M6G7xtdpBVz6WiJnF3-Li1MMku-4UUvlQ1nDzLlQ65dZN8YSRBsyyu4AbNoPtDQLxI6W03-T7bupS0Nk8So1WiE1F6nntWsqQpuU2gNxotQl6eT7CsLfK4EZC54ruNgQXqNttvitmL62EYHRx2zKrP2UlODT6AgmmDcip5plonf-yT8HZm7waS5PYAAjGXAfhr0THRHUSWG6CY0SwdlmhLMjk9j2vEFhQSqUtKs";
 
 // Déclarer window pour le SDK Spotify
 declare global {
@@ -156,6 +158,31 @@ export default function Game() {
         setGameState('playing');
     };
 
+    const saveQuizResult = async () => {
+        try {
+            // Récupérer l'historique existant
+            const historyString = await AsyncStorage.getItem('quiz_history');
+            const history = historyString ? JSON.parse(historyString) : [];
+
+            // Ajouter le nouveau résultat
+            const newResult = {
+                id: Date.now().toString(),
+                date: new Date().toISOString(),
+                score: score,
+                total: questionsCount,
+                categoryName: categoryName as string,
+            };
+
+            // Limiter à 10 résultats maximum pour éviter de prendre trop d'espace
+            const updatedHistory = [newResult, ...history].slice(0, 10);
+
+            // Sauvegarder l'historique mis à jour
+            await AsyncStorage.setItem('quiz_history', JSON.stringify(updatedHistory));
+        } catch (error) {
+            console.error('Erreur lors de la sauvegarde du résultat:', error);
+        }
+    };
+
     // Jouer la piste actuelle
     useEffect(() => {
         if (deviceId && tracks.length > 0 && currentTrackIndex < tracks.length) {
@@ -183,15 +210,6 @@ export default function Game() {
     const handleOptionSelect = (option: any) => {
         setSelectedOption(option);
 
-        // Arrêter la musique
-        if (deviceId) {
-            fetch(`https://api.spotify.com/v1/me/player/pause?device_id=${deviceId}`, {
-                method: 'PUT',
-                headers: {
-                    'Authorization': `Bearer ${SPOTIFY_TOKEN}`
-                }
-            }).catch(console.error);
-        }
 
         // Mettre à jour le score
         if (option.isCorrect) {
@@ -264,6 +282,7 @@ export default function Game() {
 
 // Puis modifier l'écran de fin de jeu
     if (gameState === 'finished') {
+        saveQuizResult();
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>Partie terminée!</Text>

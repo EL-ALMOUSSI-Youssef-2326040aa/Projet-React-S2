@@ -14,7 +14,7 @@ import { useRouter } from 'expo-router';
 import categoriesData from './categories.json'; // Importer le fichier JSON
 
 // Spotify token to use for all API calls
-const SPOTIFY_TOKEN = "BQC8YPI2P3cB_fhYLQ2otNdGc3SGQ-AqtWqDgrgInbU3g1aZ01L7up6G-3pIMuM733aZDkhSzyhj1K5bbPZeW_QrNjisiohNKPVRTJ6iem2tsmQhc3WmNuTN1b4RicYtEU0rDphuWCRYtKIZR4guFvjfKMDqYCqVpy_QTSqDaV2LJ7k8Xe2fvxmiabex1xwbSAX1WSuIQb7mKhcjKfMghct98JglKgatdLUY-ZfuCMqL1DbRg-rCJe6iuOcjHR3NNW3lRrk2V10CeiEiUXSjWBdWcoHWMlYaW7PH_mtpyzQi3K_fUN0Y7Wva8hoRI_MSd_JVHUs";
+const SPOTIFY_TOKEN = "BQB7jW2lMfSLv1m-r0HdOc5Jer-Gu6oMs1yxQ5EyrvRsF_AKu8j-WdZi3cfqjF_1YJ6wsCnk2priTUFSbnl39H0EiiZV5IR-M6G7xtdpBVz6WiJnF3-Li1MMku-4UUvlQ1nDzLlQ65dZN8YSRBsyyu4AbNoPtDQLxI6W03-T7bupS0Nk8So1WiE1F6nntWsqQpuU2gNxotQl6eT7CsLfK4EZC54ruNgQXqNttvitmL62EYHRx2zKrP2UlODT6AgmmDcip5plonf-yT8HZm7waS5PYAAjGXAfhr0THRHUSWG6CY0SwdlmhLMjk9j2vEFhQSqUtKs";
 
 // Utiliser les données importées
 const CATEGORIES = categoriesData.categories;
@@ -121,6 +121,13 @@ export default function Categories() {
             )}
 
             <Text style={styles.title}>Choisissez une catégorie</Text>
+
+            <TouchableOpacity
+                style={styles.historyButton}
+                onPress={() => router.push('/history')}
+            >
+                <Text style={styles.historyButtonText}>Historique des quiz</Text>
+            </TouchableOpacity>
 
             {categoryLoading ? (
                 <View style={styles.loadingContainer}>
