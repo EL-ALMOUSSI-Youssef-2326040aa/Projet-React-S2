@@ -13,8 +13,8 @@ import {
 import { useRouter } from 'expo-router';
 import categoriesData from './categories.json'; // Importer le fichier JSON
 
-// Spotify token to use for all API calls
-const SPOTIFY_TOKEN = "BQB7jW2lMfSLv1m-r0HdOc5Jer-Gu6oMs1yxQ5EyrvRsF_AKu8j-WdZi3cfqjF_1YJ6wsCnk2priTUFSbnl39H0EiiZV5IR-M6G7xtdpBVz6WiJnF3-Li1MMku-4UUvlQ1nDzLlQ65dZN8YSRBsyyu4AbNoPtDQLxI6W03-T7bupS0Nk8So1WiE1F6nntWsqQpuU2gNxotQl6eT7CsLfK4EZC54ruNgQXqNttvitmL62EYHRx2zKrP2UlODT6AgmmDcip5plonf-yT8HZm7waS5PYAAjGXAfhr0THRHUSWG6CY0SwdlmhLMjk9j2vEFhQSqUtKs";
+// Token Spotify (à remplacer toutes les heures pcq temporaire)
+const SPOTIFY_TOKEN = "BQA6MvOkPOE4_7snXnx5byp2mLnYAsIAAOYy5lPrRbJJmg2y1jHFfOaDHWt7HFyX3qWWsXC-iaag2VAWTmi7sxJHCRIM2Rd3wzO-10M7_gYAgZA9XNUlDkPLoICTHIbL3joOxyCW8RbKhlxu2rztWhGfNIEzG-Xy1W3QbOU616E0nENkBTGpD3uhmJzekQtUN1wr9OkSp8MwYA_WBFJBEr_LqCcCmz25TNxFbXzejMJnW6pQC71tQz9eNKbMaOdGHcI9UOM5tc4X5vgK5h0p945ypsu7AI8VCIVyLxv8tKpNUqeXhbBYhFR1munvhHPeQj5ibtg";
 
 // Utiliser les données importées
 const CATEGORIES = categoriesData.categories;
@@ -258,5 +258,29 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: '#FFFFFF',
         fontWeight: '500',
-    }
+    },
+    historyButton: {
+        backgroundColor: '#2c3e50',  // Couleur plus élégante
+        paddingVertical: 12,
+        paddingHorizontal: 24,
+        borderRadius: 30,
+        marginVertical: 10,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        alignSelf: 'center',
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 3,
+        elevation: 3,
+        borderWidth: 1,
+        borderColor: '#34495e',
+    },
+    historyButtonText: {
+        color: '#FFFFFF',
+        fontSize: 16,
+        fontWeight: '500',
+        marginLeft: 5,
+    },
 });

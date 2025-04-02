@@ -5,8 +5,8 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
-// Token Spotify (à remplacer par un token valide)
-const SPOTIFY_TOKEN = "BQB7jW2lMfSLv1m-r0HdOc5Jer-Gu6oMs1yxQ5EyrvRsF_AKu8j-WdZi3cfqjF_1YJ6wsCnk2priTUFSbnl39H0EiiZV5IR-M6G7xtdpBVz6WiJnF3-Li1MMku-4UUvlQ1nDzLlQ65dZN8YSRBsyyu4AbNoPtDQLxI6W03-T7bupS0Nk8So1WiE1F6nntWsqQpuU2gNxotQl6eT7CsLfK4EZC54ruNgQXqNttvitmL62EYHRx2zKrP2UlODT6AgmmDcip5plonf-yT8HZm7waS5PYAAjGXAfhr0THRHUSWG6CY0SwdlmhLMjk9j2vEFhQSqUtKs";
+// Token Spotify (à remplacer toutes les heures pcq temporaire)
+const SPOTIFY_TOKEN = "BQA6MvOkPOE4_7snXnx5byp2mLnYAsIAAOYy5lPrRbJJmg2y1jHFfOaDHWt7HFyX3qWWsXC-iaag2VAWTmi7sxJHCRIM2Rd3wzO-10M7_gYAgZA9XNUlDkPLoICTHIbL3joOxyCW8RbKhlxu2rztWhGfNIEzG-Xy1W3QbOU616E0nENkBTGpD3uhmJzekQtUN1wr9OkSp8MwYA_WBFJBEr_LqCcCmz25TNxFbXzejMJnW6pQC71tQz9eNKbMaOdGHcI9UOM5tc4X5vgK5h0p945ypsu7AI8VCIVyLxv8tKpNUqeXhbBYhFR1munvhHPeQj5ibtg";
 
 // Déclarer window pour le SDK Spotify
 declare global {
@@ -305,9 +305,25 @@ export default function Game() {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Text style={styles.title as any}>Blindtest: {categoryName}</Text>
-                <Text style={styles.progress as any}>Question {currentTrackIndex + 1}/{questionsCount}</Text>
-                <Text style={styles.score as any}>Score: {score}</Text>
+                <Text style={styles.title}>Blindtest: {categoryName}</Text>
+                <Text style={styles.progress}>Question {currentTrackIndex + 1}/{questionsCount}</Text>
+                <Text style={styles.score}>Score: {score}</Text>
+
+                <TouchableOpacity
+                    style={styles.quitButton}
+                    onPress={() => {
+                        // Afficher une confirmation avant de quitter
+                        if (gameState !== 'finished') {
+                            if (confirm('Êtes-vous sûr de vouloir abandonner ce quiz ?')) {
+                                router.replace('/Categories');
+                            }
+                        } else {
+                            router.replace('/Categories');
+                        }
+                    }}
+                >
+                    <Text style={styles.quitButtonText}>Quitter</Text>
+                </TouchableOpacity>
             </View>
 
             <View style={styles.gameContainer}>
@@ -553,5 +569,20 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: '#1DB954',
         marginTop: 20,
+    },
+    quitButton: {
+        backgroundColor: '#7f8c8d',
+        paddingVertical: 8,
+        paddingHorizontal: 15,
+        borderRadius: 20,
+        position: 'absolute',
+        top: 10,
+        right: 10,
+        zIndex: 10,
+    },
+    quitButtonText: {
+        color: '#FFFFFF',
+        fontSize: 14,
+        fontWeight: '500',
     }
 });

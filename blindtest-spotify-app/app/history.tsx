@@ -32,6 +32,18 @@ export default function History() {
         }
     };
 
+    const getScoreColor = (score, total) => {
+        // Calcul du pourcentage de réussite
+        const percentage = (score / total) * 100;
+
+        // Définir les couleurs pour les scores faibles, moyens et élevés
+        if (percentage >= 80) return '#1e8449'; // Vert foncé pour 8-10/10
+        if (percentage >= 60) return '#27ae60'; // Vert pour 6-7/10
+        if (percentage >= 40) return '#f39c12'; // Orange pour 4-5/10
+        if (percentage >= 20) return '#d35400'; // Orange foncé pour 2-3/10
+        return '#c0392b';                       // Rouge pour 0-1/10
+    };
+
     const clearHistory = async () => {
         try {
             await AsyncStorage.setItem('quiz_history', JSON.stringify([]));
@@ -55,7 +67,9 @@ export default function History() {
                         <View style={styles.historyItem}>
                             <Text style={styles.categoryText}>{item.categoryName}</Text>
                             <Text style={styles.dateText}>{new Date(item.date).toLocaleDateString()}</Text>
-                            <Text style={styles.scoreText}>{item.score}/{item.total}</Text>
+                            <Text style={[styles.scoreText, { color: getScoreColor(item.score, item.total) }]}>
+                                Score: {item.score}/{item.total}
+                            </Text>
                         </View>
                     )}
                 />
