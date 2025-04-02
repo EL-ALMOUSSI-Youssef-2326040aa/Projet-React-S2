@@ -1,0 +1,109 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Latino",
+      "url": "https://open.spotify.com/playlist/0x5sdZSd4GbYmAucCshEsO?si=X7xoRIvuSnuLpvtJduQypA&pi=KMvwbdhYSGK1b",
+      "id_playlist": "0x5sdZSd4GbYmAucCshEsO",
+      "image_playlist": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84303fd469104f3ff1cf503880"
+    },
+    {
+      "id": "2",
+      "name": "Funk",
+      "url": "https://open.spotify.com/playlist/1XVOl0BwfaL4QEKNcB5r0R?si=sCDlXI3MSOefTiNfq1qNXg&pi=dPFQ7OCrQCmqY",
+      "id_playlist": "1XVOl0BwfaL4QEKNcB5r0R",
+      "image_playlist": "https://mosaic.scdn.co/300/ab67616d00001e023a3c381f6910a4fe51c2640bab67616d00001e023b4f58e95e5598ecf6d90ed1ab67616d00001e02c9d0bf7323faf6b712ec96a7ab67616d00001e02e88a017e11d2dc06ff391761"
+    },
+    {
+      "id": "3",
+      "name": "Kpop",
+      "url": "https://open.spotify.com/playlist/3Ir5YWemOTGRRfXgROrsDV?si=vJZHP5I4Q3KLXmLem9shfQ&pi=0j1y-1DmR16vi",
+      "id_playlist": "3Ir5YWemOTGRRfXgROrsDV",
+      "image_playlist": "https://mosaic.scdn.co/300/ab67616d00001e02763208e225ccbbda004d2176ab67616d00001e0287f53da5fb4ab1171766b2d5ab67616d00001e0293a783eccc24a636fc8d3d46ab67616d00001e02edf5b257be1d6593e81bb45f"
+    },
+    {
+      "id": "4",
+      "name": "Musique de films",
+      "url": "https://open.spotify.com/playlist/1J8EoAHxrlggHuU3eyT3Gf?si=uQRlcAJeTS2aR_u5R5BZJg&pi=WTcB4v-qTjCWK",
+      "id_playlist": "1J8EoAHxrlggHuU3eyT3Gf",
+      "image_playlist": "https://mosaic.scdn.co/300/ab67616d00001e0205b46adf4b37df2f589cc7c9ab67616d00001e0292f051ce3c585b5c2db21d52ab67616d00001e02c47ed3d97ec570e3fa29ca7fab67616d00001e02f3a2d7f692fcad25284c5f1e"
+    },
+    {
+      "id": "5",
+      "name": "Musique jeux vidéos",
+      "url": "https://open.spotify.com/playlist/2mIgGNvWhF6f45XIBWNWx7?si=bzjQHvYFQZeF9RdWDscyUA&pi=6rasvaxZTw6Bc",
+      "id_playlist": "2mIgGNvWhF6f45XIBWNWx7",
+      "image_playlist": "https://mosaic.scdn.co/300/ab67616d00001e022523b2f62d91b1c9a82a0645ab67616d00001e025d3c0f60186be303becab05bab67616d00001e026842c99f481b8560a7db0b35ab67616d00001e02d0f040e8048fd172454ff328"
+    },
+    {
+      "id": "6",
+      "name": "Générique dessin animés",
+      "url": "https://open.spotify.com/playlist/1PPOj6GRqHUc5u4OLvX0k3?si=c0QrSKfLRdKWu0pn5Bfl6Q&pi=9fYdjxoQRH627",
+      "id_playlist": "1PPOj6GRqHUc5u4OLvX0k3",
+      "image_playlist": "https://mosaic.scdn.co/300/ab67616d00001e020d608cb171987cc9f19854a8ab67616d00001e021ec45b17af9fbaa148f41278ab67616d00001e023709925b2bf1f7000cab9cb8ab67616d00001e0243dc506e51ea724ffe975f93"
+    },
+    {
+      "id": "7",
+      "name": "Openings d’animés",
+      "url": "https://open.spotify.com/playlist/1YA5cPIfDy3L03bGnNiDM7?si=9V9Fi95qRV2iCCjR9n2C4w&pi=CGHGya_4SlWNO",
+      "id_playlist": "1YA5cPIfDy3L03bGnNiDM7",
+      "image_playlist": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c8a7389b690006be01dc5474b"
+    },
+    {
+      "id": "8",
+      "name": "Classiques de la musique",
+      "url": "https://open.spotify.com/playlist/6i2Qd6OpeRBAzxfscNXeWp?si=asuKYqSaSn-bGd5KAWMv3A&pi=BD22WV8ZRFqBC",
+      "id_playlist": "6i2Qd6OpeRBAzxfscNXeWp",
+      "image_playlist": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9418dd3e204505b565f1b3fe"
+    },
+    {
+      "id": "9",
+      "name": "Pop all time",
+      "url": "https://open.spotify.com/playlist/2OFfgjs6kj0eA6FNayhAAJ?si=bXZQroXdQayAMzmyWk2hhA&pi=Cw9jvnRHS7O3j",
+      "id_playlist": "2OFfgjs6kj0eA6FNayhAAJ",
+      "image_playlist": "https://mosaic.scdn.co/300/ab67616d00001e024121faee8df82c526cbab2beab67616d00001e026b44fa8f5415cc4c945117beab67616d00001e02b55ed804149fffbb5e35ff34ab67616d00001e02cc57e9b00b87dd0f6e868347"
+    },
+    {
+      "id": "10",
+      "name": "Rock all time",
+      "url": "https://open.spotify.com/playlist/7DgPQwzEoUVfQYBiMLER9Z?si=SNUoHX1zRWCPI8ly6_jS6A&pi=B9Rt7V8jSRq-H",
+      "id_playlist": "7DgPQwzEoUVfQYBiMLER9Z",
+      "image_playlist": "https://i.scdn.co/image/ab67706f000000020ccca5d2654a61373d688cab"
+    },
+    {
+      "id": "11",
+      "name": "Rap US all time",
+      "url": "https://open.spotify.com/playlist/7GjUYpEYbpQ6lMiGxLVCJQ?si=c-CQ232VRdai7FTmhGjLhA&pi=wjOQqhDFRiOqS",
+      "id_playlist": "7GjUYpEYbpQ6lMiGxLVCJQ",
+      "image_playlist": "https://i.scdn.co/image/ab67706f000000024e59831c1b3c424012fcefd2"
+    },
+    {
+      "id": "12",
+      "name": "Rap FR",
+      "url": "https://open.spotify.com/playlist/6pWqGLP7GFx0Q7jffiJaH0?si=7GlefeMAR4inkt4I2n4GvA&pi=mE5G5t23R2K77",
+      "id_playlist": "6pWqGLP7GFx0Q7jffiJaH0",
+      "image_playlist": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da842acfb4f4af8849da3dc20425"
+    },
+    {
+      "id": "13",
+      "name": "Années 80-90-2000",
+      "url": "https://open.spotify.com/playlist/0slE73JFtRr3F2KnfoWlbO?si=UIBcrwfRS86chWxOqiijMw&pi=aqTDuf8eTHGuw",
+      "id_playlist": "0slE73JFtRr3F2KnfoWlbO",
+      "image_playlist": "https://mosaic.scdn.co/300/ab67616d00001e022501034fecb0b3af277d5f29ab67616d00001e026b2847cc0ee2671d82426eacab67616d00001e02f625dfd057d74e2b3193e835ab67616d00001e02fa9137141ff7fe5fe30dc72d"
+    },
+    {
+      "id": "14",
+      "name": "Années 2010",
+      "url": "https://open.spotify.com/playlist/0slE73JFtRr3F2KnfoWlbO?si=UIBcrwfRS86chWxOqiijMw&pi=aqTDuf8eTHGuw",
+      "id_playlist": "0slE73JFtRr3F2KnfoWlbO",
+      "image_playlist": "https://i.scdn.co/image/ab67706f000000020419b7ea108a940a2810766c"
+    },
+    {
+      "id": "15",
+      "name": "Années 2000",
+      "url": "https://open.spotify.com/playlist/2SBqyMg9Yji935LQPpFzaF?si=mNw0X3P0Skya4AUhzIT9ww&pi=7jhxjOX5TY6SB",
+      "id_playlist": "2SBqyMg9Yji935LQPpFzaF",
+      "image_playlist": "https://i.scdn.co/image/ab67706f0000000251afd1cada9e84e687fd80b4"
+    }
+  ]
+}

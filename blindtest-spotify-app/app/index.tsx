@@ -7,7 +7,7 @@ export default function Index() {
     return (
         <View style={styles.container}>
             <View style={styles.content}>
-                <Text style={styles.title}>Bienvenue sur Blind-Spoti !</Text>
+                <Text style={styles.title}>Bienvenue sur Spoti-Find !</Text>
 
                 <TouchableOpacity
                     style={styles.button}
